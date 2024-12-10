@@ -139,10 +139,10 @@ class _UpdateSubMasterState extends State<UpdateSubMaster> {
                           // Navigator.pop(context);
                         },
                         style: ButtonStyle(
-                            minimumSize: const MaterialStatePropertyAll(
+                            minimumSize: const WidgetStatePropertyAll(
                                 Size(double.infinity, 50)),
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.blue)),
+                                WidgetStateProperty.all(Colors.blue)),
                         child: const Text(
                           "Update",
                           style: TextStyle(fontSize: 20, color: Colors.white),

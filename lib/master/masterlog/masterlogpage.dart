@@ -130,9 +130,9 @@ class _MasterLogMainPageState extends State<MasterLogMainPage> {
                     ),
                     ElevatedButton(
                       style: ButtonStyle(
-                        minimumSize: MaterialStateProperty.all<Size>(
+                        minimumSize: WidgetStateProperty.all<Size>(
                             const Size(250.0, 50.0)),
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: WidgetStateProperty.all<Color>(
                           ColorSelect.adminamber,
                         ),
                       ),

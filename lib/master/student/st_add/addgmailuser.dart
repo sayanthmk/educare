@@ -154,10 +154,10 @@ class _AddUserCenterState extends State<AddUserCenter> {
                   }
                 },
                 style: ButtonStyle(
-                  minimumSize: const MaterialStatePropertyAll(
+                  minimumSize: const WidgetStatePropertyAll(
                     Size(double.infinity, 50),
                   ),
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     Colors.deepPurple,
                   ),
                 ),

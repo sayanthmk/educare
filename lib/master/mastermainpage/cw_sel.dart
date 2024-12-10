@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 
-// ignore: must_be_immutable
 class SelectField extends StatelessWidget {
   SelectField({
     required this.fieldname,
@@ -9,9 +8,9 @@ class SelectField extends StatelessWidget {
     this.imagePath = 'picture/box1.png',
     super.key,
   });
-  String fieldname;
-  VoidCallback tapping;
-  String imagePath;
+  final String fieldname;
+  final VoidCallback tapping;
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {

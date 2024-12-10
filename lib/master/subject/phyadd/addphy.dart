@@ -115,10 +115,9 @@ class _AddSubPhysicsState extends State<AddSubPhysics> {
                     }
                   },
                   style: ButtonStyle(
-                      minimumSize: const MaterialStatePropertyAll(
+                      minimumSize: const WidgetStatePropertyAll(
                           Size(double.infinity, 50)),
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.orange)),
+                      backgroundColor: WidgetStateProperty.all(Colors.orange)),
                   child: const Text(
                     "Add Chapter",
                     style: TextStyle(fontSize: 20, color: Colors.white),

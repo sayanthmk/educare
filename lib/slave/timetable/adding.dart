@@ -208,7 +208,7 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                 const SizedBox(height: 16.0),
                 ElevatedButton(
                   style: const ButtonStyle(
-                    elevation: MaterialStatePropertyAll(3),
+                    elevation: WidgetStatePropertyAll(3),
                   ),
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
