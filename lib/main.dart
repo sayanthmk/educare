@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:projectedu/slave/timetable/model/model.dart';
+import 'package:projectedu/student/timetable/model/model.dart';
 import 'package:projectedu/starting_page/entry/splash_page/child_splash.dart';
 import 'firebase_options.dart';
 import 'package:google_fonts/google_fonts.dart';

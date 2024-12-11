@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/main.dart';
-import 'package:projectedu/master/mastermainpage/master_main.dart';
-import 'package:projectedu/slave/common/shared_pref.dart';
-import 'package:projectedu/slave/precontainer/corepage/bottomnav.dart';
+import 'package:projectedu/admin/mastermainpage/master_main.dart';
+import 'package:projectedu/student/common/shared_pref.dart';
+import 'package:projectedu/student/precontainer/corepage/bottomnav.dart';
 import 'package:projectedu/starting_page/entry/boarding_page/ch_main_boarding_home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

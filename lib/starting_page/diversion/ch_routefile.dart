@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/master/masterlog/masterlogpage.dart';
-import 'package:projectedu/slave/ch_login/ch_fire/newlog.dart';
+import 'package:projectedu/admin/masterlog/masterlogpage.dart';
+import 'package:projectedu/student/ch_login/ch_fire/newlog.dart';
 import 'package:projectedu/starting_page/diversion/diversioncard.dart';
 
 class RoutePage extends StatelessWidget {
