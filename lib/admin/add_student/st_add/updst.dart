@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:projectedu/admin/student/st_add/authentication.dart';
-import 'package:projectedu/admin/student/st_add/modelasset.dart';
+import 'package:projectedu/admin/add_student/st_add/authentication.dart';
+import 'package:projectedu/admin/add_student/st_add/modelasset.dart';
 
 class UpdateUserCenter extends StatefulWidget {
   final String id;

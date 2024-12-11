@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/main.dart';
-import 'package:projectedu/admin/mastermainpage/master_main.dart';
+import 'package:projectedu/admin/admin_homepage/master_main.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/chapter_page/list.dart';
-import 'package:projectedu/student/physics/phynew.dart';
+import 'package:projectedu/student/chapters/physics/phynew.dart';
 
 class PhysicsPage extends StatefulWidget {
   const PhysicsPage({super.key});

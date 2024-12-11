@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:projectedu/student/timetable/add_timetable.dart';
+import 'package:projectedu/student/timetable/view/add_timetable.dart';
 import 'package:projectedu/student/timetable/controller/timetable_functions.dart';
 import 'package:projectedu/student/timetable/model/model.dart';
-import 'package:projectedu/student/timetable/detail_timetable.dart';
-import 'package:projectedu/student/timetable/upadate_timetable.dart';
+import 'package:projectedu/student/timetable/view/detail_timetable.dart';
+import 'package:projectedu/student/timetable/view/upadate_timetable.dart';
 
 class TimetableScreenSetUp extends StatefulWidget {
   const TimetableScreenSetUp({Key? key}) : super(key: key);

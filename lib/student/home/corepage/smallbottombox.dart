@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:projectedu/student/calender/usecalender.dart';
-import 'package:projectedu/student/precontainer/cusomwid/customcont.dart';
+import 'package:projectedu/student/home/cusomwid/customcont.dart';
 import 'package:projectedu/student/subjectpage.dart/sub_page.dart';
 
 class SmallSizedBox extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:projectedu/student/biology/bionew.dart';
+import 'package:projectedu/student/chapters/biology/bionew.dart';
 import 'package:projectedu/student/chapter_page/list.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 

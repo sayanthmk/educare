@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:projectedu/main.dart';
 import 'package:projectedu/student/ch_login/ch_fire/cwlog/cwlog.dart';
 import 'package:projectedu/student/common/shared_pref.dart';
-import 'package:projectedu/student/precontainer/corepage/bottomnav.dart';
+import 'package:projectedu/student/home/corepage/bottomnav.dart';
 
 class LoginScreenAsset extends StatefulWidget {
   const LoginScreenAsset({super.key});

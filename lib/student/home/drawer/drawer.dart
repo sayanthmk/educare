@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:projectedu/admin/student/st_add/authentication.dart';
+import 'package:projectedu/admin/add_student/st_add/authentication.dart';
 import 'package:projectedu/student/common/shared_pref.dart';
 import 'package:projectedu/student/profile_section/profile_page.dart';
 import 'package:projectedu/starting_page/diversion/ch_routefile.dart';

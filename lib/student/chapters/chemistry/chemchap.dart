@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/chapter_page/list.dart';
-import 'package:projectedu/student/chemistry/chemnew.dart';
+import 'package:projectedu/student/chapters/chemistry/chemnew.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 
 class ChemistryPage extends StatefulWidget {

@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/firemalay/add.dart';
 import 'package:projectedu/student/firemalay/update.dart';
-import 'package:projectedu/admin/student/prof_stud/profile_stud.dart';
+import 'package:projectedu/admin/add_student/prof_stud/profile_stud.dart';
 
 class MasterHomePageCenter extends StatefulWidget {
   const MasterHomePageCenter({super.key});

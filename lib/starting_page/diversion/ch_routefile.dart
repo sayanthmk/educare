@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/admin/masterlog/masterlogpage.dart';
+import 'package:projectedu/admin/admin_login/masterlogpage.dart';
 import 'package:projectedu/student/ch_login/ch_fire/newlog.dart';
 import 'package:projectedu/starting_page/diversion/diversioncard.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/student/precontainer/carousel/carousel.dart';
-import 'package:projectedu/student/precontainer/corepage/cwhivebox.dart';
-import 'package:projectedu/student/precontainer/customappbar/customappbar.dart';
-import 'package:projectedu/student/precontainer/drawer/drawer.dart';
+import 'package:projectedu/student/home/carousel/carousel.dart';
+import 'package:projectedu/student/home/corepage/cwhivebox.dart';
+import 'package:projectedu/student/home/customappbar/customappbar.dart';
+import 'package:projectedu/student/home/drawer/drawer.dart';
 
 class UserFireHomeMain extends StatefulWidget {
   const UserFireHomeMain({super.key});

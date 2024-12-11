@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/admin/mascal/mascal.dart';
-import 'package:projectedu/admin/mastermainpage/cw_sel.dart';
-import 'package:projectedu/admin/student/st_add/homeasset.dart';
+import 'package:projectedu/admin/admin_calender/admin_calender.dart';
+import 'package:projectedu/admin/admin_homepage/cw_sel.dart';
+import 'package:projectedu/admin/add_student/st_add/homeasset.dart';
 import 'package:projectedu/admin/subject/section/sectionpage.dart';
 import 'package:projectedu/starting_page/diversion/ch_routefile.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:projectedu/admin/student/st_add/addgmailuser.dart';
-import 'package:projectedu/admin/student/st_add/updst.dart';
+import 'package:projectedu/admin/add_student/st_add/addgmailuser.dart';
+import 'package:projectedu/admin/add_student/st_add/updst.dart';
 
 class MasterAssetHome extends StatefulWidget {
   const MasterAssetHome({super.key});

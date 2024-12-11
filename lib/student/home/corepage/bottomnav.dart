@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/calender/usecalender.dart';
-import 'package:projectedu/student/precontainer/corepage/home_page.dart';
+import 'package:projectedu/student/home/corepage/home_page.dart';
 import 'package:projectedu/student/subjectpage.dart/sub_page.dart';
-import 'package:projectedu/student/timetable/timetable.dart';
+import 'package:projectedu/student/timetable/view/timetable.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
 

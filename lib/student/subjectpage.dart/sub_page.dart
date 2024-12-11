@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/student/biology/biochap.dart';
-import 'package:projectedu/student/chemistry/chemchap.dart';
-import 'package:projectedu/student/physics/phychap.dart';
+import 'package:projectedu/student/chapters/biology/biochap.dart';
+import 'package:projectedu/student/chapters/chemistry/chemchap.dart';
+import 'package:projectedu/student/chapters/physics/phychap.dart';
 import 'package:projectedu/student/subjectpage.dart/customcard.dart';
 import 'package:projectedu/student/subjectpage.dart/searchbutton.dart';
 
