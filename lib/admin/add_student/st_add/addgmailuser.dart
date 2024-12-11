@@ -7,10 +7,10 @@ class AddUserCenter extends StatefulWidget {
   const AddUserCenter({super.key});
 
   @override
-  State<AddUserCenter> createState() => _AddUserCenterState();
+  State<AddUserCenter> createState() => AddUserCenterState();
 }
 
-class _AddUserCenterState extends State<AddUserCenter> {
+class AddUserCenterState extends State<AddUserCenter> {
   final CollectionReference studentTri =
       FirebaseFirestore.instance.collection('asset');
   TextEditingController studentName = TextEditingController();

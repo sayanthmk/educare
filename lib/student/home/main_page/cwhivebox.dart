@@ -1,6 +1,7 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/hive/hive.dart';
+import 'package:shimmer/shimmer.dart';
 
 class CustomHiveBox extends StatefulWidget {
   const CustomHiveBox({
@@ -51,7 +52,17 @@ class CustomHiveBoxState extends State<CustomHiveBox> {
               width: 100,
               // child: Image.asset('images/task.png'),
               child: imageUrl == null
-                  ? const CircularProgressIndicator()
+                  ? Shimmer.fromColors(
+                      baseColor: Colors.grey[300]!,
+                      highlightColor: Colors.grey[100]!,
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    )
                   : SizedBox(
                       height: 100,
                       width: 100,
@@ -61,8 +72,6 @@ class CustomHiveBoxState extends State<CustomHiveBox> {
             const SizedBox(
               width: 20,
             ),
-            //how do you feel +get started button
-
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
