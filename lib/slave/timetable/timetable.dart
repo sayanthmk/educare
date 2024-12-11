@@ -11,10 +11,10 @@ class TimetableScreenSetUp extends StatefulWidget {
   const TimetableScreenSetUp({Key? key}) : super(key: key);
 
   @override
-  State<TimetableScreenSetUp> createState() => _TimetableScreenSetUpState();
+  State<TimetableScreenSetUp> createState() => TimetableScreenSetUpState();
 }
 
-class _TimetableScreenSetUpState extends State<TimetableScreenSetUp> {
+class TimetableScreenSetUpState extends State<TimetableScreenSetUp> {
   @override
   Widget build(BuildContext context) {
     getStudents();

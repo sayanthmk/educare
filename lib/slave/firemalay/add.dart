@@ -6,24 +6,24 @@ class AddUserCenter extends StatefulWidget {
   const AddUserCenter({super.key});
 
   @override
-  State<AddUserCenter> createState() => _AddUserCenterState();
+  State<AddUserCenter> createState() => AddUserCenterState();
 }
 
-class _AddUserCenterState extends State<AddUserCenter> {
-  final CollectionReference donor =
+class AddUserCenterState extends State<AddUserCenter> {
+  final CollectionReference studentdata =
       FirebaseFirestore.instance.collection('donor');
   TextEditingController donorName = TextEditingController();
   TextEditingController donorMail = TextEditingController();
   TextEditingController studentgender = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  void addDonor() {
+  void addStudent() {
     final data = {
       'name': donorName.text,
       'mail': donorMail.text,
       'gender': studentgender.text,
     };
-    donor.add(data);
+    studentdata.add(data);
   }
 
   @override
@@ -102,15 +102,15 @@ class _AddUserCenterState extends State<AddUserCenter> {
               ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      addDonor();
+                      addStudent();
                       Navigator.pop(context);
                     }
                   },
                   style: ButtonStyle(
-                      minimumSize: const MaterialStatePropertyAll(
+                      minimumSize: const WidgetStatePropertyAll(
                           Size(double.infinity, 50)),
                       backgroundColor:
-                          MaterialStateProperty.all(Colors.deepPurple)),
+                          WidgetStateProperty.all(Colors.deepPurple)),
                   child: const Text(
                     "ADD",
                     style: TextStyle(fontSize: 20, color: Colors.white),
@@ -134,6 +134,6 @@ class _AddUserCenterState extends State<AddUserCenter> {
       age: age,
       gender: gender,
     );
-    donor.add(student);
+    studentdata.add(student);
   }
 }

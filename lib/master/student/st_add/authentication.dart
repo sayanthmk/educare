@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthenticationPage {
@@ -19,6 +21,7 @@ class AuthenticationPage {
   }) async {
     await _firebaseAuth.createUserWithEmailAndPassword(
         email: email, password: password);
+    log('$password,$email');
   }
 
   Future signOut() async {

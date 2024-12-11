@@ -12,10 +12,10 @@ class MasterHomePageCenter extends StatefulWidget {
 }
 
 class _MasterHomePageCenterState extends State<MasterHomePageCenter> {
-  final CollectionReference donor =
+  final CollectionReference studentdata =
       FirebaseFirestore.instance.collection('donor');
-  void deleteDonor(docId) {
-    donor.doc(docId).delete();
+  void deleteStudent(docId) {
+    studentdata.doc(docId).delete();
   }
 
   @override
@@ -50,7 +50,7 @@ class _MasterHomePageCenterState extends State<MasterHomePageCenter> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
       body: StreamBuilder(
-        stream: donor.orderBy('name').snapshots(),
+        stream: studentdata.orderBy('name').snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
@@ -122,7 +122,6 @@ class _MasterHomePageCenterState extends State<MasterHomePageCenter> {
                                     )),
                                 IconButton(
                                     onPressed: () {
-                                      // deleteDonor(donorSnap.id);
                                       showDialog(
                                         context: context,
                                         builder: (ctx1) {
@@ -139,7 +138,7 @@ class _MasterHomePageCenterState extends State<MasterHomePageCenter> {
                                               ),
                                               TextButton(
                                                   onPressed: () async {
-                                                    deleteDonor(donorSnap.id);
+                                                    deleteStudent(donorSnap.id);
                                                     Navigator.of(ctx1).pop();
                                                     ScaffoldMessenger.of(
                                                             context)

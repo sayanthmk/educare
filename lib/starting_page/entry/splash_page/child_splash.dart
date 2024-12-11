@@ -20,13 +20,12 @@ class _SplashFinalState extends State<SplashFinal> {
     checkuserloggedin();
   }
 
-  // ignore: unused_element
-  void _navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 5500), () {});
-    // ignore: use_build_context_synchronously
-    Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (context) => const EntryScreenMain()));
-  }
+  // void _navigatetohome() async {
+  //   await Future.delayed(const Duration(milliseconds: 5500), () {});
+  //   // ignore: use_build_context_synchronously
+  //   Navigator.pushReplacement(context,
+  //       MaterialPageRoute(builder: (context) => const EntryScreenMain()));
+  // }
 
   @override
   Widget build(BuildContext context) {

@@ -8,11 +8,10 @@ class ChemistryCore extends StatefulWidget {
   const ChemistryCore({super.key, required this.id});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _ChemistryCoreState createState() => _ChemistryCoreState();
+  ChemistryCoreState createState() => ChemistryCoreState();
 }
 
-class _ChemistryCoreState extends State<ChemistryCore> {
+class ChemistryCoreState extends State<ChemistryCore> {
   late Stream<List<DocumentSnapshot>> subjectStream;
 
   @override

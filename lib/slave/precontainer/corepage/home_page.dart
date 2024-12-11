@@ -31,6 +31,10 @@ class _UserFireHomeMainState extends State<UserFireHomeMain> {
               SizedBox(
                 height: 25,
               ),
+              CustomCarousel(),
+              SizedBox(
+                height: 25,
+              ),
               //card hivesection start
               CustomHiveBox(),
               //card hivesection end
@@ -43,7 +47,7 @@ class _UserFireHomeMainState extends State<UserFireHomeMain> {
               SizedBox(
                 height: 25,
               ),
-              CustomCarousel(),
+
               SizedBox(
                 height: 25,
               ),

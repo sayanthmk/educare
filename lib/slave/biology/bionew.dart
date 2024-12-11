@@ -8,11 +8,10 @@ class BiologyCore extends StatefulWidget {
   const BiologyCore({super.key, required this.id});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _BiologyCoreState createState() => _BiologyCoreState();
+  BiologyCoreState createState() => BiologyCoreState();
 }
 
-class _BiologyCoreState extends State<BiologyCore> {
+class BiologyCoreState extends State<BiologyCore> {
   late Stream<List<DocumentSnapshot>> subjectStream;
 
   @override

@@ -19,7 +19,6 @@ class SmallSizedBox extends StatelessWidget {
           CustomContainer(
             ontapset: () {},
             categoryName: 'Profile',
-            // iconImagePath: 'images/appdesign.png',
             iconImagePath: const Icon(FontAwesomeIcons.person),
           ),
           CustomContainer(
@@ -31,7 +30,6 @@ class SmallSizedBox extends StatelessWidget {
               );
             },
             categoryName: 'Calender',
-            // iconImagePath: 'images/appdesign.png',
             iconImagePath: const Icon(FontAwesomeIcons.calendar),
           ),
           CustomContainer(
@@ -43,13 +41,11 @@ class SmallSizedBox extends StatelessWidget {
               );
             },
             categoryName: 'Subjects',
-            // iconImagePath: 'images/appdesign.png',
             iconImagePath: const Icon(FontAwesomeIcons.file),
           ),
           CustomContainer(
             ontapset: () {},
             categoryName: 'Marklist',
-            // iconImagePath: 'images/appdesign.png',
             iconImagePath: const Icon(FontAwesomeIcons.chartSimple),
           ),
         ],

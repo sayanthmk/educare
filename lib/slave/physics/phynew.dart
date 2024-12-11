@@ -7,11 +7,10 @@ class PhysicsCore extends StatefulWidget {
   const PhysicsCore({super.key, required this.id});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _PhysicsCoreState createState() => _PhysicsCoreState();
+  PhysicsCoreState createState() => PhysicsCoreState();
 }
 
-class _PhysicsCoreState extends State<PhysicsCore> {
+class PhysicsCoreState extends State<PhysicsCore> {
   late Stream<List<DocumentSnapshot>> subjectStream;
 
   @override

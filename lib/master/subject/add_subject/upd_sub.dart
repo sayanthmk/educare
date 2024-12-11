@@ -2,10 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/master/subject/add_subject/sub_model.dart';
 
-// ignore: must_be_immutable
 class UpdateSubMaster extends StatefulWidget {
-  String id;
-  UpdateSubMaster({super.key, required this.id});
+  final String id;
+  const UpdateSubMaster({super.key, required this.id});
 
   @override
   State<UpdateSubMaster> createState() => _UpdateSubMasterState();
@@ -17,8 +16,6 @@ class _UpdateSubMasterState extends State<UpdateSubMaster> {
   TextEditingController subjectName = TextEditingController();
   TextEditingController subjectPhone = TextEditingController();
   TextEditingController subjectNew = TextEditingController();
-  // ignore: unused_field
-  final GlobalKey<FormState> _form1Key = GlobalKey<FormState>();
 
   void updateSubject(docId) {
     final data = {
@@ -125,7 +122,6 @@ class _UpdateSubMasterState extends State<UpdateSubMaster> {
                     ),
                     ElevatedButton(
                         onPressed: () {
-                          // If the form is valid, update the donor
                           onAddStudentButtonClicked();
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -134,9 +130,6 @@ class _UpdateSubMasterState extends State<UpdateSubMaster> {
                               backgroundColor: Colors.blue,
                             ),
                           );
-
-                          // onAddStudentButtonClicked();
-                          // Navigator.pop(context);
                         },
                         style: ButtonStyle(
                             minimumSize: const WidgetStatePropertyAll(

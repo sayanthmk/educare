@@ -3,7 +3,7 @@ import 'package:projectedu/slave/biology/biochap.dart';
 import 'package:projectedu/slave/chemistry/chemchap.dart';
 import 'package:projectedu/slave/physics/phychap.dart';
 import 'package:projectedu/slave/subjectpage.dart/customcard.dart';
-// import 'package:projectedu/slave/subjectpage.dart/searchbutton.dart';
+import 'package:projectedu/slave/subjectpage.dart/searchbutton.dart';
 
 class SlaveSubjectPage extends StatefulWidget {
   const SlaveSubjectPage({super.key});
@@ -63,9 +63,7 @@ class _SlaveSubjectPageState extends State<SlaveSubjectPage> {
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: [
-                                  // SearchBarSubject()
-                                ],
+                                children: [SearchBarSubject()],
                               ),
                             ],
                           ),

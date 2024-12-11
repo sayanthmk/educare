@@ -7,11 +7,10 @@ class ChapterNew extends StatefulWidget {
   const ChapterNew({super.key, required this.id});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _ChapterNewState createState() => _ChapterNewState();
+  ChapterNewState createState() => ChapterNewState();
 }
 
-class _ChapterNewState extends State<ChapterNew> {
+class ChapterNewState extends State<ChapterNew> {
   late Stream<List<DocumentSnapshot>> subjectStream;
 
   @override

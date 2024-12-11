@@ -54,6 +54,7 @@ dependencies:
   build_runner: ^2.4.8
   google_fonts: ^6.1.0
   flutter_slidable: ^3.0.1
+  firebase_storage: ^11.6.5
 
 dev_dependencies:
   flutter_test:

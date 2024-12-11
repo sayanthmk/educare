@@ -97,35 +97,6 @@ class _MasterAdminCalendarState extends State<MasterAdminCalendar> {
   void _deleteEvent(String eventId) {
     EventActions.deleteEvent(context, eventId);
   }
-  // void _deleteEvent(String eventId) {
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return AlertDialog(
-  //         title: const Text('Delete Event'),
-  //         content: const Text('Are you sure you want to delete this event?'),
-  //         actions: [
-  //           TextButton(
-  //             onPressed: () {
-  //               Navigator.of(context).pop();
-  //             },
-  //             child: const Text('Cancel'),
-  //           ),
-  //           TextButton(
-  //             onPressed: () {
-  //               FirebaseFirestore.instance
-  //                   .collection('calendar')
-  //                   .doc(eventId)
-  //                   .delete();
-  //               Navigator.of(context).pop();
-  //             },
-  //             child: const Text('Delete'),
-  //           ),
-  //         ],
-  //       );
-  //     },
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {

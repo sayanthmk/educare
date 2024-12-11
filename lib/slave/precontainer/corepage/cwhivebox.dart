@@ -1,10 +1,38 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/slave/hive/hive.dart';
 
-class CustomHiveBox extends StatelessWidget {
+class CustomHiveBox extends StatefulWidget {
   const CustomHiveBox({
     super.key,
   });
+
+  @override
+  State<CustomHiveBox> createState() => CustomHiveBoxState();
+}
+
+class CustomHiveBoxState extends State<CustomHiveBox> {
+  String? imageUrl;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadImageFromFirebase();
+  }
+
+  Future<void> _loadImageFromFirebase() async {
+    try {
+      final ref = FirebaseStorage.instance
+          .refFromURL('gs://hoist-126af.appspot.com/abc-block.png');
+      final url = await ref.getDownloadURL();
+
+      setState(() {
+        imageUrl = url;
+      });
+    } catch (e) {
+      Text('$e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +46,17 @@ class CustomHiveBox extends StatelessWidget {
             border: Border.all()),
         child: Row(
           children: [
-            //animation picture
             SizedBox(
               height: 100,
               width: 100,
-              child: Image.asset('images/task.png'),
+              // child: Image.asset('images/task.png'),
+              child: imageUrl == null
+                  ? const CircularProgressIndicator()
+                  : SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.network(imageUrl!),
+                    ),
             ),
             const SizedBox(
               width: 20,

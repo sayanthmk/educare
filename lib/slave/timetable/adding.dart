@@ -7,12 +7,10 @@ class AddTimetableScreenSetUp extends StatefulWidget {
   const AddTimetableScreenSetUp({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _AddTimetableScreenSetUpState createState() =>
-      _AddTimetableScreenSetUpState();
+  AddTimetableScreenSetUpState createState() => AddTimetableScreenSetUpState();
 }
 
-class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
+class AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
   final List<String> subjects = [
     'Physics',
     'Chemistry',
@@ -22,8 +20,8 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
     'English'
   ];
   String selectedSubject = 'Physics';
-  DateTime _startTime = DateTime.now();
-  DateTime _endTime = DateTime.now();
+  DateTime startTime = DateTime.now();
+  DateTime endTime = DateTime.now();
 
   final TextEditingController _chapterController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
@@ -93,7 +91,7 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                     child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Start Time: $_startTime',
+                    'Start Time: $startTime',
                     style: const TextStyle(
                         fontSize: 16, fontWeight: FontWeight.bold),
                   ),
@@ -108,14 +106,14 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                       onPressed: () async {
                         DateTime? picked = await showDatePicker(
                           context: context,
-                          initialDate: _startTime,
+                          initialDate: startTime,
                           firstDate: DateTime.now(),
                           lastDate:
                               DateTime.now().add(const Duration(days: 365)),
                         );
-                        if (picked != null && picked != _startTime) {
+                        if (picked != null && picked != startTime) {
                           setState(() {
-                            _startTime = picked;
+                            startTime = picked;
                           });
                         }
                       },
@@ -128,14 +126,14 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                       onPressed: () async {
                         TimeOfDay? picked = await showTimePicker(
                           context: context,
-                          initialTime: TimeOfDay.fromDateTime(_startTime),
+                          initialTime: TimeOfDay.fromDateTime(startTime),
                         );
                         if (picked != null) {
                           setState(() {
-                            _startTime = DateTime(
-                              _startTime.year,
-                              _startTime.month,
-                              _startTime.day,
+                            startTime = DateTime(
+                              startTime.year,
+                              startTime.month,
+                              startTime.day,
                               picked.hour,
                               picked.minute,
                             );
@@ -151,7 +149,7 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Text(
-                      'End Time: $_endTime',
+                      'End Time: $endTime',
                       style: const TextStyle(
                           fontSize: 16, fontWeight: FontWeight.bold),
                     ),
@@ -167,14 +165,14 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                       onPressed: () async {
                         DateTime? picked = await showDatePicker(
                           context: context,
-                          initialDate: _endTime,
+                          initialDate: endTime,
                           firstDate: DateTime.now(),
                           lastDate:
                               DateTime.now().add(const Duration(days: 365)),
                         );
-                        if (picked != null && picked != _endTime) {
+                        if (picked != null && picked != endTime) {
                           setState(() {
-                            _endTime = picked;
+                            endTime = picked;
                           });
                         }
                       },
@@ -187,14 +185,14 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
                       onPressed: () async {
                         TimeOfDay? picked = await showTimePicker(
                           context: context,
-                          initialTime: TimeOfDay.fromDateTime(_endTime),
+                          initialTime: TimeOfDay.fromDateTime(endTime),
                         );
                         if (picked != null) {
                           setState(() {
-                            _endTime = DateTime(
-                              _endTime.year,
-                              _endTime.month,
-                              _endTime.day,
+                            endTime = DateTime(
+                              endTime.year,
+                              endTime.month,
+                              endTime.day,
                               picked.hour,
                               picked.minute,
                             );
@@ -235,8 +233,8 @@ class _AddTimetableScreenSetUpState extends State<AddTimetableScreenSetUp> {
 
   Future<void> onAddStudentButtonClicked() async {
     final sub = selectedSubject;
-    final startTimevalue = _startTime;
-    final endTimevalue = _endTime;
+    final startTimevalue = startTime;
+    final endTimevalue = endTime;
     final chaptersvalue = _chapterController.text.trim();
     if (sub.isEmpty || chaptersvalue.isEmpty) {
       return;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 
 class SelectField extends StatelessWidget {
-  SelectField({
+  const SelectField({
     required this.fieldname,
     required this.tapping,
     this.imagePath = 'picture/box1.png',

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class CardWidget extends StatelessWidget {
-  CardWidget({
+ const CardWidget({
     super.key,
     required this.currentItem,
     required this.ontap,
   });
 
   final String currentItem;
-  VoidCallback? ontap;
+  final VoidCallback? ontap;
 
   @override
   Widget build(BuildContext context) {

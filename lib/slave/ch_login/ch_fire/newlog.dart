@@ -29,12 +29,11 @@ class _LoginScreenAssetState extends State<LoginScreenAsset> {
 
     if (querySnapshot.docs.isNotEmpty) {
       String documentId = querySnapshot.docs.first.id;
-      // final sharedprefuser = await SharedPreferences.getInstance();
       await SharedPref().saveInstance();
       await SharedPref().sharedInstance.setBool(userKey, true);
       await SharedPref().sharedInstance.setString('userId', documentId);
       log(SharedPref().sharedInstance.getString('userId').toString());
-      // final key = (SharedPref().sharedInstance.getString('userId').toString());
+
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => BottomNavItem()));
@@ -82,8 +81,8 @@ class _LoginScreenAssetState extends State<LoginScreenAsset> {
             ElevatedButton(
               style: ButtonStyle(
                 minimumSize:
-                    MaterialStateProperty.all<Size>(const Size(250.0, 50.0)),
-                backgroundColor: MaterialStateProperty.all<Color>(
+                    WidgetStateProperty.all<Size>(const Size(250.0, 50.0)),
+                backgroundColor: WidgetStateProperty.all<Color>(
                   Colors.purple.shade200,
                 ),
               ),

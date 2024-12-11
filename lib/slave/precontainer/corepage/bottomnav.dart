@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/slave/calender/usecalender.dart';
-import 'package:projectedu/slave/precontainer/corepage/mitchkoko1.dart';
+import 'package:projectedu/slave/precontainer/corepage/home_page.dart';
 import 'package:projectedu/slave/subjectpage.dart/sub_page.dart';
 import 'package:projectedu/slave/timetable/timetable.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
@@ -8,10 +8,10 @@ import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
 
 class BottomNavItem extends StatelessWidget {
   BottomNavItem({super.key});
-  final _pageControlller = PageController();
+  final pageControlller = PageController();
 
   void dispose() {
-    _pageControlller.dispose();
+    pageControlller.dispose();
   }
 
   @override
@@ -20,7 +20,7 @@ class BottomNavItem extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: PageView(
-          controller: _pageControlller,
+          controller: pageControlller,
           children: const <Widget>[
             UserFireHomeMain(),
             SlaveCalendar(),
@@ -31,7 +31,7 @@ class BottomNavItem extends StatelessWidget {
         extendBody: true,
         bottomNavigationBar: RollingBottomBar(
           color: const Color.fromARGB(255, 255, 240, 219),
-          controller: _pageControlller,
+          controller: pageControlller,
           flat: true,
           useActiveColorByDefault: false,
           items: const [
@@ -46,7 +46,7 @@ class BottomNavItem extends StatelessWidget {
           ],
           enableIconRotation: true,
           onTap: (index) {
-            _pageControlller.animateToPage(
+            pageControlller.animateToPage(
               index,
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOut,

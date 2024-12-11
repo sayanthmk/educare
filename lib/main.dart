@@ -35,22 +35,6 @@ class MyApp extends StatelessWidget {
       home: const SafeArea(
         child: Scaffold(
           body: SplashFinal(),
-          // body: MasterDirectionPage(),
-          // body: MasterDirectionPage(),
-          // body: FireUserWidgetTree(),
-          // body: UserFireHomeMain(),
-          // body: UserFireHomeMain(),
-          // body: SlaveSubjectPage(),
-          // body: UserFireHomeMain(),
-          // body: BottomNavItem(),
-          // body: MasterDirectionPage(),
-          // body: MasterSplScreen(),
-          // body: MasterLogMainPage(),
-          // body: SectionPage(),
-          // body: SlaveSubjectPage(),
-          // body: RoutePage(),
-          // body:ProfPage (),
-          // body: UserProfilePage(),
         ),
       ),
     );

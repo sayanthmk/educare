@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class CustomCard extends StatelessWidget {
-  CustomCard({
+  const CustomCard({
     required this.image,
     required this.onTap,
     required this.subject,
     super.key,
   });
-  VoidCallback? onTap;
-  Image? image;
-  String subject;
+  final VoidCallback? onTap;
+  final Image? image;
+  final String subject;
 
   @override
   Widget build(BuildContext context) {

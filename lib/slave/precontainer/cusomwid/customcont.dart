@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class CustomContainer extends StatelessWidget {
   final Icon iconImagePath;
   final String categoryName;
-  VoidCallback ontapset;
-  CustomContainer({
+  final VoidCallback ontapset;
+  const CustomContainer({
     super.key,
     required this.iconImagePath,
     required this.categoryName,

@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:projectedu/master/student/st_add/authentication.dart';
 import 'package:projectedu/master/student/st_add/modelasset.dart';
 
-// ignore: must_be_immutable
 class UpdateUserCenter extends StatefulWidget {
-  String id;
-  UpdateUserCenter({super.key, required this.id});
+ final String id;
+ const UpdateUserCenter({super.key, required this.id});
 
   @override
   State<UpdateUserCenter> createState() => _UpdateUserCenterState();
@@ -169,7 +168,7 @@ class _UpdateUserCenterState extends State<UpdateUserCenter> {
                         ElevatedButton(
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              updateUserWithEmailAndPassword(); // Call email/password update method
+                              updateUserWithEmailAndPassword();
                               onUpdateStudentButtonClicked();
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(

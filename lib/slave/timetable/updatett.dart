@@ -8,8 +8,7 @@ class UpdateTimeNew extends StatefulWidget {
   const UpdateTimeNew({Key? key, required this.entry}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _UpdateTimeNewState createState() => _UpdateTimeNewState();
+  UpdateTimeNewState createState() => UpdateTimeNewState();
 }
 
 final List<String> subjects = [
@@ -22,7 +21,7 @@ final List<String> subjects = [
 ];
 String selectedSubject = 'Physics';
 
-class _UpdateTimeNewState extends State<UpdateTimeNew> {
+class UpdateTimeNewState extends State<UpdateTimeNew> {
   late String selectedSubject;
   late DateTime _startTime;
   late DateTime _endTime;

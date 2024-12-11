@@ -5,10 +5,10 @@ class HivePage extends StatefulWidget {
   const HivePage({super.key});
 
   @override
-  State<HivePage> createState() => _HivePageState();
+  State<HivePage> createState() => HivePageState();
 }
 
-class _HivePageState extends State<HivePage> {
+class HivePageState extends State<HivePage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _quantityController = TextEditingController();
   List<Map<String, dynamic>> _items = [];

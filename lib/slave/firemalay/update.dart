@@ -1,18 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:projectedu/slave/firemalay/model.dart';
 
-// ignore: must_be_immutable
 class UpdateDonor extends StatefulWidget {
-  String id;
-  UpdateDonor({super.key, required this.id});
+  final String id;
+  const UpdateDonor({super.key, required this.id});
 
   @override
   State<UpdateDonor> createState() => _UpdateDonorState();
 }
 
 class _UpdateDonorState extends State<UpdateDonor> {
-  final CollectionReference donor =
+  final CollectionReference studentUpdate =
       FirebaseFirestore.instance.collection('donor');
   TextEditingController studentName = TextEditingController();
   TextEditingController studentMail = TextEditingController();
@@ -20,13 +18,16 @@ class _UpdateDonorState extends State<UpdateDonor> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  void updateDonor(docId) {
+  void updateStudent(docId) {
     final data = {
       'name': studentName.text,
       'mail': studentMail.text,
       'gender': studentgender.text,
     };
-    donor.doc(docId).update(data).then((value) => Navigator.pop(context));
+    studentUpdate
+        .doc(docId)
+        .update(data)
+        .then((value) => Navigator.pop(context));
   }
 
   @override
@@ -124,7 +125,6 @@ class _UpdateDonorState extends State<UpdateDonor> {
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // If the form is valid, update the donor
                           onAddStudentButtonClicked();
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -136,10 +136,10 @@ class _UpdateDonorState extends State<UpdateDonor> {
                         }
                       },
                       style: ButtonStyle(
-                        minimumSize: const MaterialStatePropertyAll(
+                        minimumSize: const WidgetStatePropertyAll(
                             Size(double.infinity, 50)),
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.deepPurple),
+                            WidgetStateProperty.all(Colors.deepPurple),
                       ),
                       child: const Text(
                         "Update",
@@ -155,19 +155,17 @@ class _UpdateDonorState extends State<UpdateDonor> {
   }
 
   Future<void> onAddStudentButtonClicked() async {
-    // Extracting values from text controllers
     final name = studentName.text.trim();
     final mail = studentMail.text.trim();
     final gender = studentgender.text.trim();
 
-    // ignore: unused_local_variable
-    final newStudent = StudentModel(
-      name: name,
-      age: mail,
-      gender: gender,
-    );
+    // final newStudent = StudentModel(
+    //   name: name,
+    //   age: mail,
+    //   gender: gender,
+    // );
 
-    await donor
+    await studentUpdate
         .doc(widget.id)
         .update({'name': name, 'mail': mail, 'gender': gender});
   }

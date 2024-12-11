@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class DiversionCard extends StatelessWidget {
-  DiversionCard({
+  const DiversionCard({
     required this.fieldtext,
     required this.profilephoto,
     required this.onpressing,
     super.key,
   });
-  String profilephoto;
-  String fieldtext;
-  VoidCallback onpressing;
+  final String profilephoto;
+  final String fieldtext;
+  final VoidCallback onpressing;
   @override
   Widget build(BuildContext context) {
     return InkWell(

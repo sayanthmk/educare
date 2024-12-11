@@ -6,7 +6,7 @@ class CardCalender extends StatelessWidget {
     required this.eventDescription,
   });
 
-  final eventDescription;
+  final dynamic eventDescription;
 
   @override
   Widget build(BuildContext context) {
