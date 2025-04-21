@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectedu/student/home/carousel/carousel.dart';
-import 'package:projectedu/student/home/corepage/cwhivebox.dart';
+import 'package:projectedu/student/home/main_page/cwhivebox.dart';
 import 'package:projectedu/student/home/customappbar/customappbar.dart';
 import 'package:projectedu/student/home/drawer/drawer.dart';
 

@@ -2,10 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:projectedu/admin/subject/cheadd/chemodel.dart';
 
-// ignore: must_be_immutable
 class ChemistryUpdateSubMaster extends StatefulWidget {
-  String id;
-  ChemistryUpdateSubMaster({super.key, required this.id});
+  final String id;
+  const ChemistryUpdateSubMaster({super.key, required this.id});
 
   @override
   State<ChemistryUpdateSubMaster> createState() =>
@@ -18,8 +17,7 @@ class _ChemistryUpdateSubMasterState extends State<ChemistryUpdateSubMaster> {
   TextEditingController subjectName = TextEditingController();
   TextEditingController subjectPhone = TextEditingController();
   TextEditingController subjectNew = TextEditingController();
-  // ignore: unused_field
-  final GlobalKey<FormState> _form1Key = GlobalKey<FormState>();
+  // final GlobalKey<FormState> _form1Key = GlobalKey<FormState>();
 
   void updateSubject(docId) {
     final data = {
@@ -118,7 +116,6 @@ class _ChemistryUpdateSubMasterState extends State<ChemistryUpdateSubMaster> {
                         child: TextFormField(
                           controller: subjectNew,
                           decoration: const InputDecoration(
-                              // border: OutlineInputBorder(),
                               label: Text("Subject Summary")),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -134,7 +131,6 @@ class _ChemistryUpdateSubMasterState extends State<ChemistryUpdateSubMaster> {
                     ),
                     ElevatedButton(
                         onPressed: () {
-                          // If the form is valid, update the donor
                           onAddStudentButtonClicked();
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -143,9 +139,6 @@ class _ChemistryUpdateSubMasterState extends State<ChemistryUpdateSubMaster> {
                               backgroundColor: Colors.blue,
                             ),
                           );
-
-                          // onAddStudentButtonClicked();
-                          // Navigator.pop(context);
                         },
                         style: ButtonStyle(
                             minimumSize: const WidgetStatePropertyAll(

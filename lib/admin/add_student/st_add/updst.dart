@@ -22,7 +22,6 @@ class _UpdateUserCenterState extends State<UpdateUserCenter> {
   String errorMessage = '';
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  //  updating donor data
   void updateStudent(docId) {
     final data = {
       'name': studentName.text,

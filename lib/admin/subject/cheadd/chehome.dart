@@ -109,7 +109,6 @@ class _ChemistrySubHomeMasterState extends State<ChemistrySubHomeMaster> {
                                 )),
                             IconButton(
                                 onPressed: () {
-                                  // deleteDonor(subjectSnap.id);
                                   showDialog(
                                     context: context,
                                     builder: (ctx1) {

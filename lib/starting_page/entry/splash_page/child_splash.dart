@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projectedu/main.dart';
 import 'package:projectedu/admin/admin_homepage/master_main.dart';
 import 'package:projectedu/student/common/shared_pref.dart';
-import 'package:projectedu/student/home/corepage/bottomnav.dart';
+import 'package:projectedu/student/home/main_page/bottomnav.dart';
 import 'package:projectedu/starting_page/entry/boarding_page/ch_main_boarding_home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

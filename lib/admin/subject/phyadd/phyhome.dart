@@ -109,7 +109,6 @@ class _PhysicsSubHomeMasterState extends State<PhysicsSubHomeMaster> {
                                 )),
                             IconButton(
                                 onPressed: () {
-                                  // deleteDonor(subjectSnap.id);
                                   showDialog(
                                     context: context,
                                     builder: (ctx1) {

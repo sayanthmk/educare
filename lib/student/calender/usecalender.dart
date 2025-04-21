@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projectedu/student/calender/custcal.dart';
+import 'package:projectedu/student/calender/customcalender.dart';
 import 'package:projectedu/starting_page/utilities/colors/colors.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

@@ -1,10 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:projectedu/main.dart';
 import 'package:projectedu/student/ch_login/ch_fire/cwlog/cwlog.dart';
 import 'package:projectedu/student/common/shared_pref.dart';
-import 'package:projectedu/student/home/corepage/bottomnav.dart';
+import 'package:projectedu/student/home/main_page/bottomnav.dart';
 
 class LoginScreenAsset extends StatefulWidget {
   const LoginScreenAsset({super.key});
@@ -32,7 +31,7 @@ class _LoginScreenAssetState extends State<LoginScreenAsset> {
       await SharedPref().saveInstance();
       await SharedPref().sharedInstance.setBool(userKey, true);
       await SharedPref().sharedInstance.setString('userId', documentId);
-      log(SharedPref().sharedInstance.getString('userId').toString());
+      // log(SharedPref().sharedInstance.getString('userId').toString());
 
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(

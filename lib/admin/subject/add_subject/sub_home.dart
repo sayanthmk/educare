@@ -109,7 +109,6 @@ class _SubHomeMasterState extends State<SubHomeMaster> {
                                 )),
                             IconButton(
                                 onPressed: () {
-                                  // deleteDonor(subjectSnap.id);
                                   showDialog(
                                     context: context,
                                     builder: (ctx1) {
